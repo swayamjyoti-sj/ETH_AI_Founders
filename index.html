@@ -1,103 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>ETH AI Founders – 7 Startups Before 2026</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="logo">ETH AI Founders</div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">Team</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-    </header>
-    <main class="container">
-      <section class="hero">
-        <p class="eyebrow">ETH · RWTH Aachen · Brown · IIT · ElectriStay</p>
-        <h1>Building 7 AI Startups Before 2026</h1>
-        <p class="hero-lead"> Three ETH Zurich alumni and collaborators turning deep tech, physics, and software into real AI companies – in public, from Europe. </p>
-      </section>
-      <section>
-        <h2>Startup Portfolio</h2>
-        <p> These are the seven AI startup ideas we’re committing to build before 2026. Each one has its own page and GitHub repository (in progress). </p>
-        <div class="grid">
-          <!-- Idea 1 -->
-          <article class="card">
-            <div class="card-tag">Education · Media</div>
-            <h3>1. AI-Powered Knowledge Product Studios</h3>
-            <p> A studio that turns complex topics in science, engineering, and business into clear knowledge products: explainers, mini-courses, and actionable guides. </p>
-            <div class="card-footer">
-              <a class="btn" href="ideas/idea-1.html">View project</a>
-            </div>
-          </article>
-          <!-- Idea 2 -->
-          <article class="card">
-            <div class="card-tag">Automation · B2B</div>
-            <h3>2. Industry-Specific AI Automation Agencies</h3>
-            <p> Vertical AI agencies that automate painful workflows in specific industries – from hospitality and EV charging to materials and manufacturing. </p>
-            <div class="card-footer">
-              <a class="btn" href="ideas/idea-2.html">View project</a>
-            </div>
-          </article>
-          <!-- Idea 3 -->
-          <article class="card">
-            <div class="card-tag">Startup Validation · Founder Tools</div>
-            <h3>3. AI Validation Co-Founder</h3>
-            <p> An AI that pressure-tests startup ideas, interviews customers, and validates positioning before founders spend months building the wrong thing. </p>
-            <div class="card-footer">
-              <a class="btn" href="ideas/idea-3.html">View project</a>
-            </div>
-          </article>
-          <!-- Idea 4 -->
-          <article class="card">
-            <div class="card-tag">Insights · Market Intelligence</div>
-            <h3>4. AI Research &amp; Insights Labs for SMBs</h3>
-            <p> A fractional research lab powered by AI that turns data from CRM, reviews, social media, and competitors into clear recommendations for small and medium businesses. </p>
-            <div class="card-footer">
-              <a class="btn" href="ideas/idea-4.html">View project</a>
-            </div>
-          </article>
-          <!-- Idea 5 -->
-          <article class="card">
-            <div class="card-tag">Developer Experience · Productivity</div>
-            <h3>5. AI Systems Documentation &amp; Playbook Generator</h3>
-            <p> An AI assistant that converts code, tickets, and Slack threads into up-to-date runbooks, onboarding guides, and system documentation automatically. </p>
-            <div class="card-footer">
-              <a class="btn" href="ideas/idea-5.html">View project</a>
-            </div>
-          </article>
-          <!-- Idea 6 -->
-          <article class="card">
-            <div class="card-tag">Learning · Training</div>
-            <h3>6. AI Onboarding &amp; Training Coach for Teams</h3>
-            <p> A conversational onboarding coach that guides new team members through role-based learning paths using your existing documentation and tools. </p>
-            <div class="card-footer">
-              <a class="btn" href="ideas/idea-6.html">View project</a>
-            </div>
-          </article>
-          <!-- Idea 7 -->
-          <article class="card">
-            <div class="card-tag">Deep Tech · Research Commercialization</div>
-            <h3>7. AI Lab-to-Market Scout</h3>
-            <p> An AI scout that scans papers, theses, and patents to identify commercialization opportunities and surface spin-out candidates for universities and R&amp;D labs. </p>
-            <div class="card-footer">
-              <a class="btn" href="ideas/idea-7.html">View project</a>
-            </div>
-          </article>
+<head>
+  <meta charset="UTF-8">
+  <title>ETH AI Founders – 7 Startups Before 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="logo">ETH AI Founders</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Team</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <p class="eyebrow">ETH · RWTH Aachen · Brown · IIT</p>
+    <h1>Building 7 AI Startups Before 2026</h1>
+    <p class="hero-lead">
+      Three ETH Zurich alumni and collaborators turning deep tech, physics, and software
+      into real AI companies – in public, from Europe.
+    </p>
+  </section>
+
+  <!-- CONTROL BAR: filters + drag toggle -->
+  <section class="card controls-bar">
+    <div class="controls-group">
+      <span class="controls-label">Filter ideas:</span>
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="education">Education</button>
+      <button class="chip" data-filter="automation">Automation</button>
+      <button class="chip" data-filter="validation">Validation</button>
+      <button class="chip" data-filter="insights">Insights</button>
+      <button class="chip" data-filter="devtools">Dev tools</button>
+      <button class="chip" data-filter="training">Training</button>
+      <button class="chip" data-filter="deeptech">Deep tech</button>
+    </div>
+    <div class="controls-group">
+      <span class="controls-label">Reorder:</span>
+      <button id="toggle-drag" class="btn-ghost">Enable drag &amp; drop</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Startup Portfolio</h2>
+    <p>
+      Explore the seven AI startup ideas we are committing to build before 2026.
+      You can filter, reorder, and track status directly on this page.
+    </p>
+
+    <div class="grid">
+      <!-- Idea 1 -->
+      <article class="card idea-card" data-category="education" data-status="idea">
+        <div class="card-tag">Education · Media</div>
+        <h3>1. AI-Powered Knowledge Product Studios</h3>
+        <p>
+          A studio that turns complex topics in science, engineering, and business into clear
+          knowledge products: explainers, mini-courses, and actionable guides.
+        </p>
+        <div class="card-meta-row">
+          <button class="status-pill status-idea" data-status="idea">Idea</button>
+          <button type="button" class="small-link more-toggle">Details</button>
         </div>
-      </section>
-      <section class="cta-section card">
-        <h2>Follow the Build</h2>
-        <p> We’re documenting the journey from research labs and classrooms to real AI products: GitHub commits, experiments, and public milestones. </p>
-        <p> → Add newsletter or GitHub organization link here once ready. </p>
-      </section>
-    </main>
-    <footer class="site-footer">
-      <small> &copy; 2025 ETH AI Founders. Built with GitHub Pages. </small>
-    </footer>
-  </body>
+        <div class="card-extra">
+          <p>
+            Focus: helping experts go from “I should teach this” to structured content and
+            real distribution, with AI doing the heavy lifting.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="ideas/idea-1.html">View project</a>
+        </div>
+      </article>
+
+      <!-- Idea 2 -->
+      <article class="card idea-card" data-category="automation" data-status="idea">
+        <div class="card-tag">Automation · B2B</div>
+        <h3>2. Industry-Specific AI Automation Agencies</h3>
+        <p>
+          Vertical AI agencies that automate high-value workflows for specific industries –
+          from hospitality and EV charging to engineering and education.
+        </p>
+        <div class="card-meta-row">
+          <button class="status-pill status-idea" data-status="idea">Idea</button>
+          <button type="button" class="small-link more-toggle">Details</button>
+        </div>
+        <div class="card-extra">
+          <p>
+            Start with one vertical, build reusable automations, and evolve into a library
+            of “plays” that pay for themselves in time saved.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="ideas/idea-2.html">View project</a>
+        </div>
+      </article>
+
+      <!-- Idea 3 -->
+      <article class="card idea-card" data-category="validation" data-status="idea">
+        <div class="card-tag">Startup Validation · Founder Tools</div>
+        <h3>3. AI Validation Co-Founder</h3>
+        <p>
+          An AI that pressure-tests startup ideas, structures customer interviews, and
+          summarises validation so founders don’t build in the dark.
+        </p>
+        <div class="card-meta-row">
+          <button class="status-pill status-idea" data-status="idea">Idea</button>
+          <button type="button" class="small-link more-toggle">Details</button>
+        </div>
+        <div class="card-extra">
+          <p>
+            Helps founders move from vague ideas to evidence-backed decisions through
+            repeatable, guided validation flows.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="ideas/idea-3.html">View project</a>
+        </div>
+      </article>
+
+      <!-- Idea 4 -->
+      <article class="card idea-card" data-category="insights" data-status="idea">
+        <div class="card-tag">Insights · Market Intelligence</div>
+        <h3>4. AI Research &amp; Insights Labs for SMBs</h3>
+        <p>
+          A fractional research lab for small and medium businesses: AI-powered monitoring
+          of customers, competitors, and markets with clear action items.
+        </p>
+        <div class="card-meta-row">
+          <button class="status-pill status-idea" data-status="idea">Idea</button>
+          <button type="button" class="small-link more-toggle">Details</button>
+        </div>
+        <div class="card-extra">
+          <p>
+            Turns scattered data (CRM, reviews, socials) into simple insight packs so
+            decisions can be data-informed without a full analytics team.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="ideas/idea-4.html">View project</a>
+        </div>
+      </article>
+
+      <!-- Idea 5 -->
+      <article class="card idea-card" data-category="devtools" data-status="idea">
+        <div class="card-tag">Developer Experience · Productivity</div>
+        <h3>5. AI Systems Documentation &amp; Playbook Generator</h3>
+        <p>
+          An AI assistant that converts code, tickets, and Slack threads into living
+          documentation, runbooks, and onboarding guides for tech teams.
+        </p>
+        <div class="card-meta-row">
+          <button class="status-pill status-idea" data-status="idea">Idea</button>
+          <button type="button" class="small-link more-toggle">Details</button>
+        </div>
+        <div class="card-extra">
+          <p>
+            Aims to end “tribal knowledge” by keeping system docs close to reality with
+            minimal effort from engineers.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="ideas/idea-5.html">View project</a>
+        </div>
+      </article>
+
+      <!-- Idea 6 -->
+      <article class="card idea-card" data-category="training" data-status="idea">
+        <div class="card-tag">Learning · Training</div>
+        <h3>6. AI Onboarding &amp; Training Coach for Teams</h3>
+        <p>
+          A conversational coach that turns existing docs into interactive onboarding paths
+          and tracks how new team members are ramping up.
+        </p>
+        <div class="card-meta-row">
+          <button class="status-pill status-idea" data-status="idea">Idea</button>
+          <button type="button" class="small-link more-toggle">Details</button>
+        </div>
+        <div class="card-extra">
+          <p>
+            Combines Q&amp;A, quizzes, and practice tasks to make startup onboarding
+            smoother and less dependent on senior engineers.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="ideas/idea-6.html">View project</a>
+        </div>
+      </article>
+
+      <!-- Idea 7 -->
+      <article class="card idea-card" data-category="deeptech" data-status="idea">
+        <div class="card-tag">Deep Tech · Research Commercialisation</div>
+        <h3>7. AI Lab-to-Market Scout</h3>
+        <p>
+          An AI scout that scans scientific papers, theses, and patents to surface
+          commercialisable opportunities and potential spin-outs.
+        </p>
+        <div class="card-meta-row">
+          <button class="status-pill status-idea" data-status="idea">Idea</button>
+          <button type="button" class="small-link more-toggle">Details</button>
+        </div>
+        <div class="card-extra">
+          <p>
+            Built for universities, R&amp;D teams, and investors who want a systematic
+            way to find high-potential research before it goes stale.
+          </p>
+        </div>
+        <div class="card-footer">
+          <a class="btn" href="ideas/idea-7.html">View project</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="cta-section card">
+    <h2>Follow the Build</h2>
+    <p>
+      We’re documenting the journey from research labs and classrooms to shipped AI products:
+      GitHub commits, experiments, and public milestones.
+    </p>
+    <p>
+      → Add a newsletter / GitHub org link here once ready.
+    </p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <small>&copy; 2025 ETH AI Founders. Built with GitHub Pages.</small>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
