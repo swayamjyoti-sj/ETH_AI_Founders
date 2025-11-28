@@ -224,3 +224,9 @@ ul.clean-list {
   }
 }
 
+/* Make team cards more blue */
+.team-grid .card {
+  background: radial-gradient(circle at top left, #26378f, #1a1e4b 60%, #0b0f26);
+}
+
+
