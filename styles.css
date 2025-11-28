@@ -229,4 +229,163 @@ ul.clean-list {
   background: radial-gradient(circle at top left, #26378f, #1a1e4b 60%, #0b0f26);
 }
 
+/* ===== Controls bar & chips ===== */
+.controls-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.controls-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.controls-label {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.chip {
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 0.8rem;
+  background: transparent;
+  cursor: pointer;
+}
+
+.chip.active {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* ===== Ghost button for drag toggle ===== */
+.btn-ghost {
+  border-radius: 999px;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  background: transparent;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Status pill ===== */
+.card-meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.7rem;
+}
+
+.status-pill {
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  padding: 0.2rem 0.8rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  cursor: pointer;
+}
+
+.status-idea {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.status-in-progress {
+  background: rgba(255, 196, 0, 0.16);
+  border-color: rgba(255, 196, 0, 0.7);
+}
+
+.status-launched {
+  background: rgba(0, 200, 120, 0.16);
+  border-color: rgba(0, 200, 120, 0.8);
+}
+
+/* ===== Details toggle ===== */
+.small-link {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  text-decoration: underline;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.card-extra {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  opacity: 0.9;
+  display: none;
+}
+
+.card-extra.open {
+  display: block;
+}
+
+/* ===== Drag & drop visual cue ===== */
+.idea-card.drag-enabled {
+  cursor: grab;
+}
+
+.idea-card.dragging {
+  opacity: 0.5;
+  cursor: grabbing;
+}
+
+/* ===== Assumption checklist (for idea pages) ===== */
+.assumption-block {
+  margin-top: 1.2rem;
+}
+
+.assumption-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.6rem 0 0.8rem;
+}
+
+.assumption-list li {
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.assumption-list input[type="checkbox"] {
+  margin-top: 0.1rem;
+}
+
+.assumption-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  margin-bottom: 0.25rem;
+}
+
+.assumption-progress-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #45f5c0, #7cf0ff);
+  transition: width 0.2s ease-out;
+}
+
+.assumption-progress-label {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+
 
