@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Idea 5 – Title from Article – ETH AI Founders</title>
+  <title>AI Systems Documentation &amp; Playbook Generator – ETH AI Founders</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../styles.css">
 </head>
@@ -19,84 +19,123 @@
 <main class="container">
   <section class="hero">
     <p class="eyebrow">Idea 5</p>
-    <h1>Idea 5 – Title from Article</h1>
+    <h1>AI Systems Documentation &amp; Playbook Generator</h1>
     <p class="hero-lead">
-      <!-- TODO: Replace this with your own 2–3 sentence summary of the idea,
-           based on the article, in your own words. -->
-      Short summary of what this startup does, who it helps, and how AI is used.
+      An AI assistant that turns messy reality—code, configs, tickets, Slack threads—into
+      clean documentation, runbooks, and onboarding guides for technical teams.
     </p>
     <p>
-      <!-- Optional: add one extra sentence with an example use-case. -->
-      Add a high-level example here (e.g. “Imagine a founder who…”).
+      Instead of “tribal knowledge” and outdated wiki pages, teams get living docs that stay
+      in sync with how the system actually works today.
     </p>
   </section>
 
   <section class="idea-layout">
     <div>
+      <!-- Problem -->
       <article class="card">
         <h2>Problem</h2>
         <p>
-          <!-- TODO: Describe the problem this idea targets, in your own words. -->
-          Explain the core pain point for the target user segment.
+          Every engineering / data team knows the pain:
         </p>
         <ul class="clean-list">
-          <li>Concrete pain point 1.</li>
-          <li>Concrete pain point 2.</li>
-          <li>Concrete pain point 3.</li>
+          <li>Critical systems are understood by 1–2 “heroes” who get pinged for everything.</li>
+          <li>Docs are scattered across README files, Confluence, Notion, and old Google Docs.</li>
+          <li>Onboarding new engineers is slow and fragile; outages are harder to debug than they need to be.</li>
         </ul>
+        <p>
+          Everyone agrees documentation matters, but it’s always postponed “until later”.
+        </p>
       </article>
 
+      <!-- Solution -->
       <article class="card">
         <h2>Solution</h2>
         <p>
-          <!-- TODO: Describe how the product solves that problem, using AI. -->
-          Overview of the product/service and how AI gives leverage.
+          An AI system that continuously ingests signals from your stack and generates the
+          documentation and playbooks you wish you had:
         </p>
         <ul class="clean-list">
-          <li>Key feature 1.</li>
-          <li>Key feature 2.</li>
-          <li>Key feature 3.</li>
+          <li>Connects to Git repositories, issue trackers, CI logs, and chat (Slack / Teams).</li>
+          <li>Builds a knowledge graph of services, dependencies, and key workflows.</li>
+          <li>Generates human-readable:
+            <ul class="clean-list">
+              <li>System overviews and architecture descriptions.</li>
+              <li>Runbooks for common incidents (“DB latency”, “queue backlog”).</li>
+              <li>Onboarding guides tailored to specific roles (backend, data, ops).</li>
+            </ul>
+          </li>
+          <li>Keeps docs “fresh” by proposing updates when code or infra changes.</li>
+        </ul>
+        <p>
+          Engineers review and accept changes, keeping humans in control of the source of truth.
+        </p>
+      </article>
+
+      <!-- Example Workflow -->
+      <article class="card">
+        <h2>Example Workflow</h2>
+        <ul class="clean-list">
+          <li>Connect GitHub / GitLab, Jira / Linear, Slack, and your infra provider.</li>
+          <li>AI maps services, main flows, and recurring incidents.</li>
+          <li>It generates a “System Overview” and 3–5 initial runbooks.</li>
+          <li>Team reviews, edits, and approves with change tracking.</li>
+          <li>Whenever significant changes land (new service, big refactor),
+              the system suggests doc updates or new playbooks.</li>
         </ul>
       </article>
 
+      <!-- Why Us -->
       <article class="card">
-        <h2>Why Now / Why Us</h2>
+        <h2>Why Us</h2>
         <p>
-          <!-- Optional: connect this idea to your team’s background or 2025–2026 timing. -->
-          Add your angle: why this team, in this decade, is well-placed to build it.
+          With backgrounds in materials, mechanics, physics, and full-stack SaaS, we’re used
+          to documenting complex systems for students, reviewers, and collaborators.
+          This idea turns that documentation habit into a product for engineering teams.
         </p>
       </article>
     </div>
 
     <aside>
+      <!-- Snapshot -->
       <article class="card">
         <h2>Snapshot</h2>
-        <p><strong>Status:</strong> Idea / Validation / MVP (pick one).</p>
-        <p><strong>Target users:</strong> Brief description of who this is for.</p>
+        <p><strong>Status:</strong> Idea → MVP concept.</p>
+        <p><strong>Target users:</strong></p>
+        <ul class="clean-list">
+          <li>Early-stage SaaS startups with growing engineering teams.</li>
+          <li>Scale-ups with microservices and on-call rotations.</li>
+          <li>Data / ML teams with complex pipelines and handover issues.</li>
+        </ul>
       </article>
 
+      <!-- Business Model -->
       <article class="card">
         <h2>Business Model</h2>
         <ul class="clean-list">
-          <li>Main way you charge (SaaS, services, marketplace, etc.).</li>
-          <li>Any upsell or premium tier idea.</li>
+          <li><strong>SaaS pricing</strong> per engineering seat or per project.</li>
+          <li>Higher tiers for SSO, compliance exports (SOC2 evidence), and audit logs.</li>
+          <li>Professional services: “doc sprints” where you co-create with larger teams.</li>
         </ul>
       </article>
 
+      <!-- Tech Stack -->
       <article class="card">
         <h2>Tech Stack (Draft)</h2>
         <ul class="clean-list">
-          <li>Frontend framework.</li>
-          <li>Backend / data components.</li>
-          <li>LLM / AI APIs you’d likely use.</li>
+          <li>Connectors for GitHub / GitLab, Jira / Linear, Slack, cloud providers.</li>
+          <li>Backend: Python / Node.js with a Postgres DB and a vector store.</li>
+          <li>LLMs for summarisation, code understanding, and doc generation.</li>
+          <li>Frontend: React / Next.js app or embedded widgets in existing docs tools.</li>
         </ul>
       </article>
 
+      <!-- Links -->
       <article class="card">
         <h2>GitHub &amp; Links</h2>
         <ul class="clean-list">
           <li>GitHub repo: <em>add link once created</em>.</li>
-          <li>Landing page or waitlist: <em>optional</em>.</li>
+          <li>Example runbook set: <em>coming soon</em>.</li>
         </ul>
       </article>
     </aside>
